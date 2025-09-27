@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse</title>
+
+    <style>
+        .com-efeito{
+            background: blue;
+            color: white;
+            border: 2px solid yellow;
+            font-size: 20px; 
+
+        }
+
+        .com-efeito:hover {
+            background: green;
+            color: yellow;
+            border: 2px dashed red;
+        }
+
+        .com-efeito:active {
+            background: brown;
+            color: orange;
+            border: 2px solid gray;
+        }
+
+        .com-efeito:focus {
+            background: gray;
+            color: white;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <button class="com-efeito">Botão</button>
+
+    <div class="com-efeito">Div com efeito</div>
+    
+    <input type="text" class="com-efeito">
+</body>
+</html>

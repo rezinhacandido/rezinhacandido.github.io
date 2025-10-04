@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><Data></Data></title>
+</head>
+<body>
+    Data atual: <span id="data-atual"></span>
+
+    <script>
+        var data = new Date();
+
+        var dia = data.getDate();
+        var mes = data.getMonth() + 1;
+        var ano = data.getFullYear();
+
+        var hora = data.getHours();
+        var minuto = data.getMinutes();
+        var segundo = data.getSeconds();
+
+        document.getElementById("data-atual").textContent = dia + "/" + mes + "/" + ano + " " + hora + ":" + minuto + ":" + segundo;
+
+
+    </script>
+</body>
+</html>

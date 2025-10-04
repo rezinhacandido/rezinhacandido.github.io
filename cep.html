@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de CEP:</title>
+</head>
+<body>
+    Digite um CEP: <input type="text" id="texto-cep">
+    <br>
+    <button id="buscar">Buscar</button>
+    <br>
+    Rua: <span id="rua"></span>
+    <br>
+    Bairro: <span id="bairro"></span>
+    <br>
+    Cidade: <span id="cidade"></span>
+    <br>
+    Estado: <span id="estado"></span>
+
+    <script>
+        document.getElementById("buscar").onclick = function() {
+            var cep = document.getElementById('texto-cep').value;
+
+            fetch("http://viacep.com.br/ws/" + cep + "/json")
+            .then(resultado => resultado.json())
+            .then(function (resultado) {
+                document.getElementById("rua").textContent = resultado.logradouro;
+                document.getElementById("bairro").textContent = resultado.bairro;
+                document.getElementById("cidade").textContent = resultado.localidade;
+                document.getElementById("estado").textContent = resultado.estado;
+            });
+        }
+    </script>
+    
+</body>
+</html>

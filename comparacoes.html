@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparações</title>
+</head>
+
+<body>
+    Digite um número: <input type="number" id="numero-digitado">
+    <br>
+    <button id="enviar">Enviar</button>
+
+    <script>
+        document.getElementById('enviar').onclick = function () {
+            var numero = document.getElementById("numero-digitado").value;
+
+            if (numero > 10) {
+                alert("O número é maior que 10");
+            } else if (numero < 10) {
+                alert("O número é menor que 10");
+            } else if (numero == 10) {
+                alert("O número é menor que 10");
+            }
+
+        }
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto</title>
+</head>
+<body>
+    Digite seu nome: <input type="text" id="texto-nome">
+    <br>
+    <button id="enviar">Enviar</button>
+
+    <script>
+        document.getElementById("enviar").onclick = function() {
+            var nome = document.getElementById("texto-nome").value;
+
+            alert("Olá, " + nome);
+        }
+    </script>
+    
+</body>
+</html>
